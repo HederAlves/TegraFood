@@ -39,7 +39,7 @@ export default {
   
 <style scoped>
 .mainContainer {
-  @apply flex;
+  @apply flex justify-between;
   color: #9098B1;
 }
 ul{
@@ -47,7 +47,7 @@ ul{
   height: 235px;
 }
 .sectionForm {
-  @apply pt-20 pl-72 flex flex-col justify-around items-center;
+  @apply flex flex-col justify-around items-center mt-8 mr-72;
   height: 560px;
 }
 
