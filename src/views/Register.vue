@@ -42,10 +42,6 @@ export default {
   @apply flex;
   color: #9098B1;
 }
-
-.imageLogin {
-  height: 635px;
-}
 ul{
   @apply flex flex-col justify-between;
   height: 235px;
