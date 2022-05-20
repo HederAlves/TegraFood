@@ -6,8 +6,6 @@
       <TheFilters />
       <section class="sectionProductsList">
         <!-- Componente dos produtos -->
-        
-        <ThePictureIcons :src="avatar" />
       </section>
     </main>
   </div>
@@ -18,10 +16,9 @@ import TheHeader from '../components/Organism/TheHeader.vue';
 import TheSidebarMenu from '../components/Organism/TheSidebarMenu.vue';
 import TheFilters from '../components/Atmos/TheFilters.vue';
 import ThePictureIcons from '../components/Atmos/ThePictureIcons.vue';
-
 export default {
   name: "menu",
-  components: { TheHeader, TheSidebarMenu, TheFilters, ThePictureIcons},
+  components: { TheHeader, TheSidebarMenu, TheFilters, ThePictureIcons },
 }
 </script >
 
