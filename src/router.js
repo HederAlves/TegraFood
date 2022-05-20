@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import Login from './views/Login.vue'
 import Store from './views/Store.vue'
 import Register from './views/Register.vue'
+import ShoppingCart from './views/ShoppingCart.vue'
 
 const routes = [{
     path: '/',
@@ -12,10 +13,15 @@ const routes = [{
     path: '/store',
     name: 'store',
     component: Store
-},{
+}, {
     path: '/register',
     name: 'register',
     component: Register
+},
+{
+    path: '/shoppingcart',
+    name: 'shoppingcart',
+    component: ShoppingCart
 }]
 
 const router = createRouter({ history: createWebHistory(), routes });
