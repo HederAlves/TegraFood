@@ -12,6 +12,6 @@ export default {
 <style scoped>
 button {
   @apply inline-flex justify-end mr-5 mt-20 mb-3;
-  width: 970px;
+  width: 975px;
 }
 </style>
