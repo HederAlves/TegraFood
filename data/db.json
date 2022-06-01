@@ -1,0 +1,13 @@
+{
+  "user":[
+    {
+      "email": "dev@admin.com",
+      "senha": "admin"
+    },
+    {
+        "email": "prog@admin.com",
+        "senha": "prog"
+      }
+
+  ]
+}
