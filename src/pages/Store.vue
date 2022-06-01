@@ -8,10 +8,10 @@
     />
     <main>
       <TheHeader />
-      <div class="containerTitlesFilter">
+      <article class="containerTitlesFilter">
         <h1 class="titleFilter">Produtos</h1>
-        <h1 class="titleFilter">Todos</h1>
-      </div>
+        <h2 class="titleFilter">Todos</h2>
+      </article>
       <TheListAllProducts v-if="products" />
       <TheListSalty v-if="salty" />
       <TheListDessert v-if="dessert" />
@@ -80,13 +80,13 @@ export default {
 }
 main {
   @apply pb-5;
-  width: 1100px;
+  width: 1095px;
 }
 .containerTitlesFilter{
-  @apply flex absolute mt-6
+  @apply flex absolute mt-6;
 }
 .titleFilter{
-  @apply mt-12 ml-16 text-3xl pr-5 font-bold;
+  @apply mt-12 ml-16 text-3xl font-bold;
     color: #223263;
 }
 .titleFilter:hover{

@@ -10,16 +10,16 @@ const routes = [{
     name: 'login',
     component: Login
 }, {
-    path: '/store',
+    path: '/loja',
     name: 'store',
     component: Store
 }, {
-    path: '/register',
+    path: '/cadastro',
     name: 'register',
     component: Register
 },
 {
-    path: '/shoppingcart',
+    path: '/carrinho-de-compras',
     name: 'shoppingcart',
     component: ShoppingCart
 }]
@@ -27,4 +27,3 @@ const routes = [{
 const router = createRouter({ history: createWebHistory(), routes });
 
 export default router;
-

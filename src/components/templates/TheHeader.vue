@@ -1,7 +1,7 @@
 <template>
     <header>
         <ul class="listHeader">
-            <li> <router-link to="/shoppingcart"><img class="imageIcon" src="/icons/shopping-cart.png" alt="Icone carrinho de compras"></router-link></li>
+            <li> <router-link to="/carrinho-de-compras"><img class="imageIcon" src="/icons/shopping-cart.png" alt="Icone carrinho de compras"></router-link></li>
             <li><img class="imageIcon" src="/icons/notifications.png" alt="Icone de Notificação"></li>
             <li><img class="imagePerfil" src="/images/perfil-people.png" alt="Imagem de perfil"></li>
         </ul>

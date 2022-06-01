@@ -8,7 +8,7 @@
           type="email"
           placeholder="Seu e-mail"
           required="Digite seu Email"
-          v-model="form.email"
+          v-model="formData.email"
         />
       </li>
       <li class="inputContainer">
@@ -18,7 +18,7 @@
           type="text"
           placeholder="Senha"
           required="Digite sua Senha"
-          v-model="form.password"
+          v-model="formData.password"
         />
       </li>
     </ul>
@@ -27,29 +27,37 @@
 </template>
 
 <script>
-
 export default {
-    name: "TheFormLogin",
-    data() {
-        return {
-            form: {
-                email: "",
-                password: ""
-            }
+  name: "TheFormLogin",
+  data() {
+    return {
+      formData: {
+        id: 1,
+        email: "",
+        password: ""
+      },
+    };
+  },
+  methods: {
+    async login() {
+      const response = await fetch("https://tegra-food.herokuapp.com/login", {
+        method: "POST",
+        body: JSON.stringify(this.formData),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      })
+       // .then((response) => response.json())
+         //.then((json) => json);
+        console.log(this.formData);
+        console.log(response);
+        if(response.ok) {
+          this.$router.push('/loja')
+        } else {
+          alert()
         }
     },
-    methods: {
-        login() {
-            let email = "dev@admin.com";
-            let password = "admin"
-
-            if(email === this.form.email && password === this.form.password) {
-                this.$router.push( 'store' )
-            } else {
-                alert("Senha e login não conferem ou não existem")
-            }
-        },
-    },
+  },
 };
 </script>
 
@@ -57,12 +65,10 @@ export default {
 .loginForm {
   @apply flex flex-col justify-around h-56;
 }
-
 .inputList {
   @apply flex flex-col justify-between;
   height: 120px;
 }
-
 .inputContainer {
   @apply flex p-2;
   width: 343;
@@ -71,24 +77,20 @@ export default {
   border: solid 2px #ebf0ff;
   border-radius: 5px;
 }
-
 .inputLogin {
   position: absolute;
   margin: -8px 0px 0px 36px;
   width: 343;
   height: 44px;
 }
-
 .inputLogin:focus {
   box-shadow: 0 0 0 0;
   border: 0 none;
   outline: 0;
 }
-
 .iconEmail {
   padding: 5px 0px 3px 0px;
 }
-
 button {
   background: #dc9000;
   color: white;
