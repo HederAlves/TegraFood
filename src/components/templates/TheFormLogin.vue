@@ -54,7 +54,7 @@ export default {
         if(response.ok) {
           this.$router.push('/loja')
         } else {
-          alert()
+          alert("Email e senha não conferem")
         }
     },
   },

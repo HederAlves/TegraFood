@@ -5,7 +5,7 @@
     <div class="mainContainer">
       <TheListShoppingCart />
       <footer>
-        <a href="/loja">Escolher mais</a>
+        <a href="https://tegra-food.vercel.app/loja">Escolher mais</a>
         <button>Fechar pedido<img class="icon" src="../../public/icons/shopping-cart-sm.png" alt=""></button>
       </footer>
     </div>

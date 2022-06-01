@@ -6,7 +6,7 @@
       </tr>
       <tr>
         <td class="tableLeft">Entrega</td>
-        <td class="tableRigth"><a href="">Calcular</a></td>
+        <td class="tableRigth"><a href="https://tegra-food.vercel.app/carrinho-de-compras">Calcular</a></td>
       </tr>
       <tr>
         <td class="tableLeft">Total</td>
