@@ -2,48 +2,8 @@
   "users": [
     {
       "id": 1,
-      "email": "@",
-      "password": "0"
-    },
-    {
-      "id": 2,
-      "email": "w",
-      "password": "w"
-    },
-    {
-      "id": 3,
-      "email": "qw",
-      "password": "12"
-    },
-    {
-      "id": 4,
-      "email": "heder",
-      "password": "12345"
-    },
-    {
-      "id": 5,
-      "email": "101",
-      "password": "601"
-    },
-    {
-      "id": 6,
-      "email": "800",
-      "password": "800"
-    },
-    {
-      "id": 7,
-      "email": "oiio",
-      "password": "oiio"
-    },
-    {
-      "id": 8,
-      "email": "525",
-      "password": "525"
-    },
-    {
-      "id": 9,
-      "email": "heder",
-      "password": "808080"
+      "email": "heder@gmail.com",
+      "password": "852"
     }
   ]
 }
