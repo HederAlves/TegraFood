@@ -1,12 +1,6 @@
 <template>
   <div class="mainContainer">
-    <img class="imageLogin" src="/images/image-login.png" alt="imagem de lanches" />
-    <section class="sectionForm">
-      <h1 class="titleLogin">Vamos começar!</h1>
-      <p>Crie uma nova conta</p>
-      <TheFormRegister />
-      <p>Não tem uma conta?<router-link class="stringRouter" to="/">Entrar</router-link></p>
-    </section>
+   <TheFormRegister />
   </div>
 </template>
   

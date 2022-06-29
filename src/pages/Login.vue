@@ -1,17 +1,5 @@
 <template>
-  <div class="mainContainer">
-    <img class="imageLogin" src="/images/image-login.png" alt="imagem de lanches" />
-    <section class="sectionForm">
-      <h1 class="titleLogin">Bem vindo!</h1>
-      <p>Faça seu login para continuar</p>
       <TheFormLogin />
-      <span>
-        <p class="lineDivision">ou</p>
-      </span>
-      <button class="buttonGoogle"> <img class="iconGoogle" src="../../public/icons/google.png" alt=""> Entrar com o Google</button>
-      <p>Não tem uma conta?<router-link class="stringRouter" to="/register">Cadastre</router-link></p>
-    </section>
-  </div>
 </template>
   
   <script>

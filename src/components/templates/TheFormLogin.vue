@@ -1,104 +1,40 @@
 <template>
-  <form class="loginForm" @submit.prevent="login">
-    <ul class="inputList">
-      <li class="inputContainer">
-        <img class="iconEmail" src="/icons/email.png" alt="" />
-        <input
-          class="inputLogin"
-          type="email"
-          placeholder="Seu e-mail"
-          required="Digite seu Email"
-          v-model="formData.email"
-        />
-      </li>
-      <li class="inputContainer">
-        <img class="" src="/icons/password.png" alt="" />
-        <input
-          class="inputLogin"
-          type="text"
-          placeholder="Senha"
-          required="Digite sua Senha"
-          v-model="formData.password"
-        />
-      </li>
-    </ul>
-    <button @click="login">Entrar</button>
-  </form>
+  <main class="border-white bg-white rounded-xl p-5 shadow-2xl">
+    <section class="flex justify-around border-b-4 pb-10">
+      <div>
+        <h1>Dados Gerais</h1>
+      </div>
+      <ul @submit.prevent="save">
+        <div class="flex gap-10 mb-10">
+          <input type="text" name="" class="border bg-slate-500 text-white" v-model="formData.email">
+          <input type="text" name="" class="border bg-slate-500 text-white" v-model="formData.password">
+          <input type="text" name="" class="border">
+          <input type="text" name="" class="border">
+          </div>
+        <button @click="save">clique</button>
+      </ul>
+    </section>
+  </main>
 </template>
+<script
+  lang="ts"
+  setup
+>import { reactive } from 'vue';
 
-<script>
-export default {
-  name: "TheFormLogin",
-  data() {
-    return {
-      formData: {
-        id: 1,
-        email: "",
-        password: ""
+  const formData = reactive({
+    id: '',
+    email: '',
+    password: '',
+  });
+  async function save() {
+    console.log("oi");
+    console.log(formData)
+    await fetch('http://localhost:3000/users', {
+      method: 'POST',
+      body: JSON.stringify(formData),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
       },
-    };
-  },
-  methods: {
-    async login() {
-      const response = await fetch("https://tegra-food.herokuapp.com/login", {
-        method: "POST",
-        body: JSON.stringify(this.formData),
-        headers: {
-          "Content-type": "application/json; charset=UTF-8",
-        },
-      })
-       // .then((response) => response.json())
-         //.then((json) => json);
-        console.log(this.formData);
-        console.log(response);
-        if(response.ok) {
-          this.$router.push('/loja')
-        } else {
-          alert("Email e senha não conferem")
-        }
-    },
-  },
-};
+    });
+  }
 </script>
-
-<style scoped>
-.loginForm {
-  @apply flex flex-col justify-around h-56;
-}
-.inputList {
-  @apply flex flex-col justify-between;
-  height: 120px;
-}
-.inputContainer {
-  @apply flex p-2;
-  width: 343;
-  height: 48px;
-  box-sizing: border-box;
-  border: solid 2px #ebf0ff;
-  border-radius: 5px;
-}
-.inputLogin {
-  position: absolute;
-  margin: -8px 0px 0px 36px;
-  width: 343;
-  height: 44px;
-}
-.inputLogin:focus {
-  box-shadow: 0 0 0 0;
-  border: 0 none;
-  outline: 0;
-}
-.iconEmail {
-  padding: 5px 0px 3px 0px;
-}
-button {
-  background: #dc9000;
-  color: white;
-  width: 343px;
-  height: 57px;
-  border-radius: 5px;
-  text-align: center;
-  margin: 0;
-  font-weight: bold;
-}
-</style>
