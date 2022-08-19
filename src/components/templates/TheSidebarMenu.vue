@@ -1,6 +1,6 @@
 <template>
         <section class="menuSidebar">
-            <img src="/images/logo-Tegrafood.png" alt="Logo Tegrafood">
+            <img src="/images/logo.png" alt="Logo">
             <ul>
                 <li class="listSidebarButton">
                     <button class="buttonSidebar" @click="$emit('productsListAll')">Todos</button>
