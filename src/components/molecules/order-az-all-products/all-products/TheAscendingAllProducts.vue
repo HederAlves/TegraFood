@@ -26,8 +26,7 @@ export default {
             products: [],
         };
     },
-    async mounted() {
-        //API Todos os produtos em ordem decrescente
+    async function() {
         const resp = await fetch("https://tegra-food-skyot.herokuapp.com/products?page=1&order=ASC");
         const response = await resp.json();
         this.products = response.data;
